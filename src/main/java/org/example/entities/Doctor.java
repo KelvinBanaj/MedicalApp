@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 @Table(name = "doctors")
 @Data
-@ToString(callSuper = true)
+@ToString(callSuper = true, exclude = "appointments")
 public class Doctor extends BaseEntities {
     @Column(name = "first_name")
     private String firstName;

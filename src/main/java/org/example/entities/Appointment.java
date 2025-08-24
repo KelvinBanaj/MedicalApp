@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "appointments")
 @Data
-@ToString(callSuper = true, exclude = "patient,doctor,prescription,payments")
+@ToString(callSuper = true)
 public class Appointment extends BaseEntities {
     @Column(name="appointment_time")
     private LocalDateTime appointmentTime;

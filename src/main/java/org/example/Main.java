@@ -10,6 +10,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Main {
@@ -23,7 +24,7 @@ public class Main {
         PaymentRepository paymentRepository = new PaymentRepository(session);
         PrescriptionRepository prescriptionRepository = new PrescriptionRepository(session);
         AppointmentServices appointmentServices = new AppointmentServices(appointmentRepository,doctorRepository,patientRepository);
-
+//
 //        Patient patient = new Patient();
 //        patient.setFirstName("Kelvin");
 //        patient.setLastName("Banaj");
@@ -31,9 +32,9 @@ public class Main {
 //        patient.setBirthDate(LocalDate.of(2006,9,13));
 //        patient.setContactInfo("03748929");
 //        patient.setMedicalHistory("Nuk ka");
-
+//
 //        System.out.println(patientRepository.save(patient));
-
+//
 //        Doctor doctor = new Doctor();
 //        doctor.setFirstName("Andrea");
 //        doctor.setLastName("Dollaku");
@@ -43,6 +44,9 @@ public class Main {
 //        doctor.setEndWorkAt(LocalTime.of(20,0));
 //
 //        System.out.println(doctorRepository.save(doctor));
+
+//        appointmentServices.createAppointment("Test", LocalDateTime.of(2025, 9, 10, 12, 0), 1L, 1L);
+        System.out.println(appointmentRepository.findAll());
 
     }
 }

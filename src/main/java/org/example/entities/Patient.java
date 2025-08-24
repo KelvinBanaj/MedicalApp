@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 @Table(name = "patients")
 @Data
-@ToString(callSuper = true)
+@ToString(callSuper = true, exclude = {"appointments", "payments"})
 public class Patient extends BaseEntities{
     @Column(name = "first_name")
     private String firstName;
