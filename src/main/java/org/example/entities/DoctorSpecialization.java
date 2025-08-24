@@ -5,5 +5,7 @@ public enum DoctorSpecialization {
     Pediatrician,
     Internist,
     Gynecologist,
-    Cardiologist
+    Cardiologist,
+    HEMATOLOG
+
 }
