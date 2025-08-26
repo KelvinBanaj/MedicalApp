@@ -31,14 +31,4 @@ public class Patient extends BaseEntities{
     @OneToMany(mappedBy = "patient")
     private List<Payments>payments;
 
-    public void addAppointment(Appointment appointment){
-        if(this.getAppointments()==null||this.getAppointments().isEmpty()) {
-            List<Appointment> appointmentList = new ArrayList<Appointment>();
-            appointmentList.add(appointment);
-            this.setAppointments(appointmentList);
-        }else{
-            this.getAppointments().add(appointment);
-        }
-    }
-
 }

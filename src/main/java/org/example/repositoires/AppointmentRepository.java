@@ -31,7 +31,7 @@ public class AppointmentRepository extends GenericRepositories<Appointment,Long>
     }
 
     public List<Appointment>findByStatus(AppointmentStatus appointmentStatus){
-        String query = "select a from Appointment a where a.status = :status";
+        String query = "select a from Appointment a where a.appointmentStatus = :status";
         Query<Appointment> findQuery = session.createQuery(query, Appointment.class);
         findQuery.setParameter("status","%"+appointmentStatus);
         return findQuery.getResultList();
